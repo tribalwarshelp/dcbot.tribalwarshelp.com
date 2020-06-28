@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import { COMMANDS_PAGE } from "@config/routes";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Image from "gatsby-image";
@@ -12,8 +13,8 @@ import {
   Grid,
 } from "@material-ui/core";
 import { Link } from "gatsby-theme-material-ui";
-import Layout from "../components/Layout/Layout";
-import SEO from "../components/SEO";
+import Layout from "@components/Layout/Layout";
+import SEO from "@components/SEO";
 
 const useStyles = makeStyles(theme => ({
   divider: {
@@ -79,7 +80,11 @@ const IndexPage = ({ location }) => {
                   Invite {data.site.siteMetadata.title}
                 </Link>
               </Button>
-              <Button>Commands</Button>
+              <Button>
+                <Link to={COMMANDS_PAGE} color="inherit" underline="none">
+                  Commands
+                </Link>
+              </Button>
             </ButtonGroup>
           </Grid>
           <Grid item xs={12} md={5}>

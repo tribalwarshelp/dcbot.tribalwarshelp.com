@@ -1,1 +1,1 @@
-# bot.tribalwarshelp.com
+# dcbot.tribalwarshelp.com
