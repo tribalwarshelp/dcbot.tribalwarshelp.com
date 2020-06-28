@@ -32,5 +32,20 @@ module.exports = {
     },
     `gatsby-theme-material-ui`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://dcbot.tribalwarshelp.com",
+        sitemap: "https://dcbot.tribalwarshelp.com/sitemap.xml",
+        env: {
+          development: {
+            policy: [{ userAgent: "*", disallow: ["/"] }],
+          },
+          production: {
+            policy: [{ userAgent: "*", allow: "/" }],
+          },
+        },
+      },
+    },
   ],
 };
