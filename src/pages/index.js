@@ -59,14 +59,11 @@ const IndexPage = ({ location }) => {
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} md={7}>
             <Typography variant="h2" component="h1" gutterBottom>
-              Watch your tribe conquers!
+              Observe your tribe conquers!
             </Typography>
             <Typography gutterBottom>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              condimentum finibus finibus. In blandit at sapien sit amet
-              pellentesque. Integer a massa et nulla posuere volutpat vitae et
-              diam. Praesent eget libero quis sapien accumsan interdum. Ut in
-              blandit dui.
+              This bot notifies you about conquered/lost village by tribe near
+              real-time.
             </Typography>
             <Divider variant="fullWidth" className={classes.divider} />
             <ButtonGroup variant="contained" color="secondary">

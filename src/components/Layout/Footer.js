@@ -21,7 +21,7 @@ function Footer({ title }) {
   return (
     <AppBar component="footer" position="static" className={classes.appBar}>
       <Container>
-        <Toolbar disableGutters variant="dense">
+        <Toolbar disableGutters>
           <Typography align="center" className={classes.copyright}>
             I customized the wicked cool background at{" "}
             <Link color="secondary" href="https://svgbackgrounds.com">
