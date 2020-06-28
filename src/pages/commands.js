@@ -86,7 +86,7 @@ const adminCommands = [
   {
     command: "tw!groups",
     description:
-      "This command shows you a list of groups created on this guild.",
+      "This command shows you a list of groups created by this guild.",
   },
   {
     command: "tw!deletegroup",

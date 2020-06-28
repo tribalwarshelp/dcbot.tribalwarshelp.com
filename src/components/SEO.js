@@ -9,6 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import seoBG from "@images/seo-bg.png";
 
 function SEO({ description, lang, meta, title, location }) {
   const { site } = useStaticQuery(
@@ -56,7 +57,19 @@ function SEO({ description, lang, meta, title, location }) {
           content: `${site.siteMetadata.siteUrl}${location}`,
         },
         {
-          property: `og:type`,
+          property: `og:image`,
+          content: `${site.siteMetadata.siteUrl}${seoBG}`,
+        },
+        {
+          property: `og:image:width`,
+          content: `1280`,
+        },
+        {
+          property: `og:image:height`,
+          content: `640`,
+        },
+        {
+          property: `og:image`,
           content: `website`,
         },
         {
@@ -78,6 +91,10 @@ function SEO({ description, lang, meta, title, location }) {
         {
           name: `twitter:url`,
           content: `${site.siteMetadata.siteUrl}${location}`,
+        },
+        {
+          name: `twitter:image`,
+          content: `${site.siteMetadata.siteUrl}${seoBG}`,
         },
         {
           name: `twitter:image:alt`,
