@@ -5,8 +5,7 @@ module.exports = {
         condimentum finibus finibus. In blandit at sapien sit amet pellentesque.
         Integer a massa et nulla posuere volutpat vitae et diam. Praesent eget
         libero quis sapien accumsan interdum. Ut in blandit dui.`,
-    author: `@gatsbyjs`,
-    siteUrl: "https://bot.tribalwarshelp.com",
+    siteUrl: "https://dcbot.tribalwarshelp.com",
     twhelpUrl: "https://tribalwarshelp.com",
     botInviteUrl:
       "https://discord.com/oauth2/authorize?client_id=707859810900508703&scope=bot&permissions=8",

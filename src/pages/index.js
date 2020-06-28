@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   const classes = useStyles();
   const data = useStaticQuery(graphql`
     query {
@@ -53,7 +53,7 @@ const IndexPage = () => {
 
   return (
     <Layout className={classes.layout}>
-      <SEO title="Home" />
+      <SEO title="Home" location="" />
       <Container className={classes.container}>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} md={7}>

@@ -14,12 +14,12 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const NotFoundPage = () => {
+const NotFoundPage = ({ location }) => {
   const classes = useStyles();
 
   return (
     <Layout>
-      <SEO title="404: Not found" />
+      <SEO title="404: Not found" location={location.pathname} />
       <Container className={classes.container}>
         <Typography variant="h1">404</Typography>
         <Typography variant="h3">
