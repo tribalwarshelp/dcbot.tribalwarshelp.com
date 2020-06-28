@@ -54,7 +54,7 @@ const IndexPage = ({ location }) => {
 
   return (
     <Layout className={classes.layout}>
-      <SEO title="Home" location="" />
+      <SEO title="Home" location="/" />
       <Container className={classes.container}>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} md={7}>
