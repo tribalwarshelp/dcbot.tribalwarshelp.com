@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `TWHelp Discord Bot`,
-    description: `Near real-time notifications about lost/conquered village by a tribe in the game tribalwars.com.`,
+    description: `Live notifications about lost/conquered village by a tribe in the game TribalWars.`,
     siteUrl: "https://dcbot.tribalwarshelp.com",
     twhelpUrl: "https://tribalwarshelp.com",
     botInviteUrl:

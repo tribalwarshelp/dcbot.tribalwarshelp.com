@@ -59,7 +59,7 @@ const IndexPage = ({ location }) => {
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} md={7}>
             <Typography variant="h2" component="h1" gutterBottom>
-              Observe your tribe conquers!
+              Observe your tribe ennoblements!
             </Typography>
             <Typography gutterBottom>
               This bot notifies you about conquered/lost village by tribe near
