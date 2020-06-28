@@ -62,7 +62,7 @@ const IndexPage = ({ location }) => {
               Observe your tribe ennoblements!
             </Typography>
             <Typography gutterBottom>
-              This bot notifies you about conquered/lost village by tribe near
+              This bot notifies you about conquered/lost village by a tribe near
               real-time.
             </Typography>
             <Divider variant="fullWidth" className={classes.divider} />
@@ -72,9 +72,9 @@ const IndexPage = ({ location }) => {
                   href={data.site.siteMetadata.botInviteUrl}
                   color="inherit"
                   underline="none"
-                  title={`Invite ${data.site.siteMetadata.title}`}
+                  title={`Invite bot to your server`}
                 >
-                  Invite {data.site.siteMetadata.title}
+                  Invite bot to your server
                 </Link>
               </Button>
               <Button>

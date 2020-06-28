@@ -153,7 +153,7 @@ const CommandsPage = ({ location }) => {
         description={pageDescription}
       />
       <Container>
-        <Box mb={3}>
+        <Box mb={3} component="section">
           <Typography variant="h2" component="h1" align="center" gutterBottom>
             Commands for all guild members
           </Typography>
@@ -165,16 +165,18 @@ const CommandsPage = ({ location }) => {
             ))}
           </Grid>
         </Box>
-        <Typography variant="h2" component="h1" align="center" gutterBottom>
-          Admin commands
-        </Typography>
-        <Grid container spacing="2">
-          {adminCommands.map(cmd => (
-            <Grid item xs={12} sm={6}>
-              <Command key={cmd.command} {...cmd} />
-            </Grid>
-          ))}
-        </Grid>
+        <section>
+          <Typography variant="h2" component="h1" align="center" gutterBottom>
+            Admin commands
+          </Typography>
+          <Grid container spacing="2">
+            {adminCommands.map(cmd => (
+              <Grid item xs={12} sm={6}>
+                <Command key={cmd.command} {...cmd} />
+              </Grid>
+            ))}
+          </Grid>
+        </section>
       </Container>
     </Layout>
   );
