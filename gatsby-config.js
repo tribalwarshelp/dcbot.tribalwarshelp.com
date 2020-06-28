@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Tribal Wars Bot`,
+    title: `TWHelp Discord Bot`,
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
         condimentum finibus finibus. In blandit at sapien sit amet pellentesque.
         Integer a massa et nulla posuere volutpat vitae et diam. Praesent eget

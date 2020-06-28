@@ -1,14 +1,33 @@
-import React from "react"
+import React from "react";
 
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/SEO"
+import { makeStyles } from "@material-ui/core/styles";
+import { Container, Typography } from "@material-ui/core";
+import Layout from "../components/Layout/Layout";
+import SEO from "../components/SEO";
 
-const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+const useStyles = makeStyles(() => ({
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    textAlign: "center",
+  },
+}));
 
-export default NotFoundPage
+const NotFoundPage = () => {
+  const classes = useStyles();
+
+  return (
+    <Layout>
+      <SEO title="404: Not found" />
+      <Container className={classes.container}>
+        <Typography variant="h1">404</Typography>
+        <Typography variant="h3">
+          You just hit a route that doesn&#39;t exist.
+        </Typography>
+      </Container>
+    </Layout>
+  );
+};
+
+export default NotFoundPage;

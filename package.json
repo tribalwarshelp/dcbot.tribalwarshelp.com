@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "dcbot-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Tribal Wars Discord Bot website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Dawid Wysokiński <xyztojajestem@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/styles": "^4.10.0",
@@ -30,7 +30,6 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
