@@ -34,7 +34,9 @@ const Command = ({ command, commandSyntax, description, example }) => {
 const commandsForAll = [
   {
     command: "tw!help",
+    commandSyntax: "tw!help",
     description: "This command shows you all available commands.",
+    example: "tw!help",
   },
   {
     command: "tw!tribe topatt",
@@ -81,12 +83,16 @@ const commandsForAll = [
 const adminCommands = [
   {
     command: "tw!addgroup",
+    commandSyntax: "tw!addgroup",
     description: "This command adds a new observation group.",
+    example: "tw!addgroup",
   },
   {
     command: "tw!groups",
+    commandSyntax: "tw!addgroup",
     description:
       "This command shows you a list of groups created by this guild.",
+    example: "tw!addgroup",
   },
   {
     command: "tw!deletegroup",
@@ -117,21 +123,21 @@ const adminCommands = [
     command: "tw!conqueredvillages",
     commandSyntax: "tw!conqueredvillages [group ID from tw!groups]",
     description:
-      "This command changes channel at which notifications about conquered village will show.",
+      "This command changes the channel on which notifications about conquered village will show. IMPORTANT! Call this command on the channel you want to display these notifications.",
     example: "tw!conqueredvillages 1",
+  },
+  {
+    command: "tw!lostvillages",
+    commandSyntax: "tw!lostvillages [group ID from tw!groups]",
+    description:
+      "This command changes the channel on which notifications about lost village will show. IMPORTANT! Call this command on the channel you want to display these notifications.",
+    example: "tw!lostvillages 2",
   },
   {
     command: "tw!unobserveconqueredvillages",
     commandSyntax: "tw!unobserveconqueredvillages [group ID from tw!groups]",
     description: "This command disable notifications about conquered villages.",
     example: "tw!unobserveconqueredvillages 1",
-  },
-  {
-    command: "tw!lostvillages",
-    commandSyntax: "tw!lostvillages [group ID from tw!groups]",
-    description:
-      "This command changes channel at which notifications about lost village will show.",
-    example: "tw!lostvillages 2",
   },
   {
     command: "tw!unobservelostvillages",
