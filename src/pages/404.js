@@ -25,7 +25,11 @@ const NotFoundPage = ({ location, pageContext }) => {
       lang={pageContext.langKey}
       pathname={location.pathname}
     >
-      <SEO title="404: Not found" location={location.pathname} />
+      <SEO
+        title="Page Not found"
+        description="Page not found"
+        location={location.pathname}
+      />
       <Container className={classes.container}>
         <Typography gutterBottom variant="h1">
           Page Not Found

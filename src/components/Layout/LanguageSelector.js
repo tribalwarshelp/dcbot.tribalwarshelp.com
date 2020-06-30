@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import plFlag from "@images/flags/pl.svg";
 import usaFlag from "@images/flags/usa.svg";
 
@@ -59,5 +60,11 @@ function LanguageSelector({ lang, languages, pathname }) {
     </div>
   );
 }
+
+Header.propTypes = {
+  lang: PropTypes.string.isRequired,
+  pathname: PropTypes.string.isRequired,
+  languages: PropTypes.arrayOf(PropTypes.string),
+};
 
 export default LanguageSelector;

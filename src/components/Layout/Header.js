@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import routes from "@config/routes";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -111,5 +112,12 @@ function Header({ twhelpUrl, lang, languages, pathname }) {
     </AppBar>
   );
 }
+
+Header.propTypes = {
+  lang: PropTypes.string.isRequired,
+  twhelpUrl: PropTypes.string.isRequired,
+  pathname: PropTypes.string.isRequired,
+  languages: PropTypes.arrayOf(PropTypes.string),
+};
 
 export default Header;

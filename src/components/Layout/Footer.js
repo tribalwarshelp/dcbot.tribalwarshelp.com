@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar, Typography, Container } from "@material-ui/core";
@@ -44,5 +45,10 @@ function Footer({ title, lang }) {
     </AppBar>
   );
 }
+
+Footer.propTypes = {
+  title: PropTypes.string.isRequired,
+  lang: PropTypes.string.isRequired,
+};
 
 export default Footer;
