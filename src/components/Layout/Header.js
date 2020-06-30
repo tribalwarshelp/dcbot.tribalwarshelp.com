@@ -26,6 +26,9 @@ const useStyles = makeStyles(theme => ({
       marginRight: theme.spacing(1),
     },
   },
+  link: {
+    width: "100%",
+  },
 }));
 
 function Header({ twhelpUrl, lang, languages, pathname }) {
@@ -89,9 +92,10 @@ function Header({ twhelpUrl, lang, languages, pathname }) {
                     title="Home"
                     color="inherit"
                     underline="none"
-                    href={routes[lang].HOME}
+                    className={classes.link}
+                    to={routes[lang].HOME}
                   >
-                    Home
+                    Homepage
                   </Link>
                 </MenuItem>
                 <MenuItem>

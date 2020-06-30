@@ -13,6 +13,9 @@ const useStyles = makeStyles(() => ({
     justifyContent: "center",
     textAlign: "center",
   },
+  layout: {
+    minHeight: "100vh",
+  },
 }));
 
 const NotFoundPage = ({ location, pageContext }) => {
@@ -22,6 +25,7 @@ const NotFoundPage = ({ location, pageContext }) => {
     <Layout
       showHeader={false}
       showFooter={false}
+      className={classes.layout}
       lang={pageContext.langKey}
       pathname={location.pathname}
     >
