@@ -21,7 +21,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Layout = ({ children, className, lang, pathname }) => {
+const Layout = ({
+  children,
+  className,
+  lang,
+  pathname,
+  showHeader,
+  showFooter,
+}) => {
   const classes = useStyles();
   const { site } = useStaticQuery(
     graphql`
@@ -39,21 +46,28 @@ const Layout = ({ children, className, lang, pathname }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header
-        twhelpUrl={site.siteMetadata.twhelpUrl}
-        languages={site.siteMetadata.languages}
-        lang={lang}
-        pathname={pathname}
-      />
+      {showHeader && (
+        <Header
+          twhelpUrl={site.siteMetadata.twhelpUrl}
+          languages={site.siteMetadata.languages}
+          lang={lang}
+          pathname={pathname}
+        />
+      )}
       <main
         className={className ? classes.main + " " + className : classes.main}
       >
         <div className={classes.mainChild}>{children}</div>
       </main>
-      <Footer title={site.siteMetadata.title} lang={lang} />
+      {showFooter && <Footer title={site.siteMetadata.title} lang={lang} />}
       <CssBaseline />
     </ThemeProvider>
   );
+};
+
+Layout.defaultProps = {
+  showHeader: true,
+  showFooter: true,
 };
 
 Layout.propTypes = {
@@ -61,6 +75,8 @@ Layout.propTypes = {
   className: PropTypes.string,
   lang: PropTypes.string.isRequired,
   pathname: PropTypes.string.isRequired,
+  showHeader: PropTypes.bool.isRequired,
+  showFooter: PropTypes.bool.isRequired,
 };
 
 export default Layout;

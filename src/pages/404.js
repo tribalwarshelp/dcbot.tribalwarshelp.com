@@ -2,6 +2,7 @@ import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { Container, Typography } from "@material-ui/core";
+import { Link } from "gatsby-theme-material-ui";
 import Layout from "@components/Layout/Layout";
 import SEO from "@components/SEO";
 
@@ -14,16 +15,29 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const NotFoundPage = ({ location }) => {
+const NotFoundPage = ({ location, pageContext }) => {
   const classes = useStyles();
 
   return (
-    <Layout>
+    <Layout
+      showHeader={false}
+      showFooter={false}
+      lang={pageContext.langKey}
+      pathname={location.pathname}
+    >
       <SEO title="404: Not found" location={location.pathname} />
       <Container className={classes.container}>
-        <Typography variant="h1">404</Typography>
-        <Typography variant="h3">
-          You just hit a route that doesn&#39;t exist.
+        <Typography gutterBottom variant="h1">
+          Page Not Found
+        </Typography>
+        <Typography gutterBottom variant="h4">
+          Looks like you've followed a broken link or entered a URL that doesn't
+          exist on this site.
+        </Typography>
+        <Typography variant="h4">
+          <Link color="secondary" to="/">
+            Back to our site
+          </Link>
         </Typography>
       </Container>
     </Layout>
