@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import routes from "@config/routes";
+
 import { makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
@@ -23,7 +25,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Header({ title, twhelpUrl }) {
+function Header({ title, twhelpUrl, lang }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const classes = useStyles();
   const open = Boolean(anchorEl);
@@ -42,7 +44,7 @@ function Header({ title, twhelpUrl }) {
       <Container>
         <Toolbar disableGutters>
           <Typography variant="h4" className={classes.title}>
-            <Link to="/" underline="none" color="inherit">
+            <Link to={routes[lang].HOME} underline="none" color="inherit">
               {title}
             </Link>
           </Typography>

@@ -1,36 +1,3 @@
-import React from "react";
-
-import {
-  Container,
-  Card,
-  CardHeader,
-  CardContent,
-  Typography,
-  Grid,
-  Box,
-} from "@material-ui/core";
-import Layout from "@components/Layout/Layout";
-import SEO from "@components/SEO";
-
-const Command = ({ command, commandSyntax, description, example }) => {
-  return (
-    <Card>
-      <CardHeader title={command} subheader={commandSyntax} />
-      <CardContent>
-        <Typography>
-          {description}
-          {example && (
-            <>
-              <br />
-              <strong>Example</strong>: {example}
-            </>
-          )}
-        </Typography>
-      </CardContent>
-    </Card>
-  );
-};
-
 const commandsForAll = [
   {
     command: "tw!help",
@@ -116,7 +83,7 @@ const adminCommands = [
     command: "tw!unobserve",
     commandSyntax:
       "tw!unobserve [group ID from tw!groups] [id from tw!observations]",
-    description: "This command adds a tribe to the observation group.",
+    description: "This command removes a tribe to the observation group.",
     example: "tw!unobserve 1 pl143 975 170",
   },
   {
@@ -147,45 +114,7 @@ const adminCommands = [
   },
 ];
 
-const pageDescription =
-  "List of commands offered by TWHelp Discord Bot with examples";
-
-const CommandsPage = ({ location }) => {
-  return (
-    <Layout>
-      <SEO
-        title="Commands"
-        location={location.pathname}
-        description={pageDescription}
-      />
-      <Container>
-        <Box mb={3} component="section">
-          <Typography variant="h2" component="h1" align="center" gutterBottom>
-            Commands for all guild members
-          </Typography>
-          <Grid container spacing="2">
-            {commandsForAll.map(cmd => (
-              <Grid item xs={12} sm={6}>
-                <Command key={cmd.command} {...cmd} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-        <section>
-          <Typography variant="h2" component="h1" align="center" gutterBottom>
-            Admin commands
-          </Typography>
-          <Grid container spacing="2">
-            {adminCommands.map(cmd => (
-              <Grid item xs={12} sm={6}>
-                <Command key={cmd.command} {...cmd} />
-              </Grid>
-            ))}
-          </Grid>
-        </section>
-      </Container>
-    </Layout>
-  );
+export default {
+  commandsForAll,
+  adminCommands,
 };
-
-export default CommandsPage;

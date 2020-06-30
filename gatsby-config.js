@@ -1,8 +1,10 @@
+const siteUrl = "https://dcbot.tribalwarshelp.com";
+
 module.exports = {
   siteMetadata: {
     title: `TWHelp Discord Bot`,
     description: `Live notifications about lost/conquered village by a tribe in the game TribalWars.`,
-    siteUrl: "https://dcbot.tribalwarshelp.com",
+    siteUrl,
     twhelpUrl: "https://tribalwarshelp.com",
     botInviteUrl:
       "https://discord.com/oauth2/authorize?client_id=707859810900508703&scope=bot&permissions=8",
@@ -35,8 +37,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://dcbot.tribalwarshelp.com",
-        sitemap: "https://dcbot.tribalwarshelp.com/sitemap.xml",
+        host: siteUrl,
+        sitemap: siteUrl + "/sitemap.xml",
         env: {
           development: {
             policy: [{ userAgent: "*", disallow: ["/"] }],
@@ -45,6 +47,15 @@ module.exports = {
             policy: [{ userAgent: "*", allow: "/" }],
           },
         },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "en",
+        langKeyForNull: "en",
+        useLangKeyLayout: false,
+        prefixDefault: false,
       },
     },
   ],

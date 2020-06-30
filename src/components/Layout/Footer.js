@@ -15,15 +15,25 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function Footer({ title }) {
+const locales = {
+  en: {
+    backgroundCredits: "I customized the wicked cool background at",
+  },
+  pl: {
+    backgroundCredits: "Tło pochodzi z",
+  },
+};
+
+function Footer({ title, lang }) {
   const classes = useStyles();
+  const translations = locales[lang] || locales["en"];
 
   return (
     <AppBar component="footer" position="static" className={classes.appBar}>
       <Container>
         <Toolbar disableGutters>
           <Typography align="center" className={classes.copyright}>
-            I customized the wicked cool background at{" "}
+            {translations.backgroundCredits}{" "}
             <Link color="secondary" href="https://svgbackgrounds.com">
               svgbackgrounds.com
             </Link>

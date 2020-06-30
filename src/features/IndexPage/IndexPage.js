@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { COMMANDS_PAGE } from "@config/routes";
+import routes from "@config/routes";
+import translations from "./translations";
 
 import { makeStyles } from "@material-ui/core/styles";
 import Image from "gatsby-image";
@@ -32,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const IndexPage = ({ location }) => {
+const IndexPage = ({ location, pageContext }) => {
   const classes = useStyles();
   const data = useStaticQuery(graphql`
     query {
@@ -51,20 +52,23 @@ const IndexPage = ({ location }) => {
       }
     }
   `);
+  const t = translations[pageContext.langKey];
 
   return (
-    <Layout className={classes.layout}>
-      <SEO title="Home" location="/" />
+    <Layout className={classes.layout} lang={pageContext.langKey}>
+      <SEO
+        title={t.title}
+        description={t.description}
+        location={location.pathname}
+        lang={pageContext.langKey}
+      />
       <Container className={classes.container}>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} md={7}>
             <Typography variant="h2" component="h1" gutterBottom>
-              Observe your tribe ennoblements!
+              {t.header.title}
             </Typography>
-            <Typography gutterBottom>
-              This bot notifies you about conquered/lost village by a tribe near
-              real-time.
-            </Typography>
+            <Typography gutterBottom>{t.header.description}</Typography>
             <Divider variant="fullWidth" className={classes.divider} />
             <ButtonGroup variant="contained" color="secondary">
               <Button>
@@ -72,14 +76,18 @@ const IndexPage = ({ location }) => {
                   href={data.site.siteMetadata.botInviteUrl}
                   color="inherit"
                   underline="none"
-                  title={`Invite bot to your server`}
+                  title={t.header.inviteBot}
                 >
-                  Invite bot to your server
+                  {t.header.inviteBot}
                 </Link>
               </Button>
               <Button>
-                <Link to={COMMANDS_PAGE} color="inherit" underline="none">
-                  Commands
+                <Link
+                  to={routes[pageContext.langKey].COMMANDS_PAGE}
+                  color="inherit"
+                  underline="none"
+                >
+                  {t.header.commands}
                 </Link>
               </Button>
             </ButtonGroup>
