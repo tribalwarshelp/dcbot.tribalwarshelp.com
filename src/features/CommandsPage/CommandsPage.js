@@ -12,7 +12,7 @@ const CommandsPage = ({ location, pageContext }) => {
   const c = commands[pageContext.langKey];
 
   return (
-    <Layout lang={pageContext.langKey}>
+    <Layout lang={pageContext.langKey} pathname={location.pathname}>
       <SEO
         title={t.title}
         location={location.pathname}

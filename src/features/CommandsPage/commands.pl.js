@@ -81,8 +81,7 @@ const adminCommands = [
   },
   {
     command: "tw!unobserve",
-    commandSyntax:
-      "tw!unobserve [ID grupy z tw!groups] [id from tw!observations]",
+    commandSyntax: "tw!unobserve [ID grupy z tw!groups] [id z tw!observations]",
     description: "Usuwa plemię z grupy.",
     example: "tw!unobserve 1 pl143 975 170",
   },

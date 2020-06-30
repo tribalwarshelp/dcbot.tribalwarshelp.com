@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Layout = ({ children, className, lang }) => {
+const Layout = ({ children, className, lang, pathname }) => {
   const classes = useStyles();
   const { site } = useStaticQuery(
     graphql`
@@ -30,6 +30,7 @@ const Layout = ({ children, className, lang }) => {
           siteMetadata {
             title
             twhelpUrl
+            languages
           }
         }
       }
@@ -39,9 +40,10 @@ const Layout = ({ children, className, lang }) => {
   return (
     <ThemeProvider theme={theme}>
       <Header
-        title={site.siteMetadata.title}
         twhelpUrl={site.siteMetadata.twhelpUrl}
+        languages={site.siteMetadata.languages}
         lang={lang}
+        pathname={pathname}
       />
       <main
         className={className ? classes.main + " " + className : classes.main}
@@ -58,6 +60,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   lang: PropTypes.string.isRequired,
+  pathname: PropTypes.string.isRequired,
 };
 
 export default Layout;

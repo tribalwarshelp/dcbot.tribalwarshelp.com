@@ -8,6 +8,7 @@ module.exports = {
     twhelpUrl: "https://tribalwarshelp.com",
     botInviteUrl:
       "https://discord.com/oauth2/authorize?client_id=707859810900508703&scope=bot&permissions=8",
+    languages: ["en", "pl"],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

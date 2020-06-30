@@ -55,7 +55,7 @@ const IndexPage = ({ location, pageContext }) => {
   const t = translations[pageContext.langKey];
 
   return (
-    <Layout className={classes.layout} lang={pageContext.langKey}>
+    <Layout lang={pageContext.langKey} pathname={location.pathname}>
       <SEO
         title={t.title}
         description={t.description}

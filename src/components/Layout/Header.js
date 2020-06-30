@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
   Toolbar,
-  Typography,
   Container,
   Hidden,
   Menu,
@@ -13,19 +12,22 @@ import {
 } from "@material-ui/core";
 import { Menu as MenuIcon } from "@material-ui/icons";
 import { Link, IconButton } from "gatsby-theme-material-ui";
+import LanguageSelector from "./LanguageSelector";
 
-const useStyles = makeStyles(() => ({
-  title: {
-    flexGrow: 1,
-  },
+const useStyles = makeStyles(theme => ({
   appBar: {
     backgroundColor: "transparent",
     color: "#fff",
     boxShadow: "none",
   },
+  hidden: {
+    "& > *:not(:last-child)": {
+      marginRight: theme.spacing(1),
+    },
+  },
 }));
 
-function Header({ title, twhelpUrl, lang }) {
+function Header({ twhelpUrl, lang, languages, pathname }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const classes = useStyles();
   const open = Boolean(anchorEl);
@@ -43,13 +45,16 @@ function Header({ title, twhelpUrl, lang }) {
     <AppBar position="static" className={classes.appBar}>
       <Container>
         <Toolbar disableGutters>
-          <Typography variant="h4" className={classes.title}>
-            <Link to={routes[lang].HOME} underline="none" color="inherit">
-              {title}
-            </Link>
-          </Typography>
-          <div>
-            <Hidden implementation="css" xsDown>
+          <LanguageSelector
+            lang={lang}
+            languages={languages}
+            pathname={pathname}
+          />
+          <nav>
+            <Hidden implementation="css" xsDown className={classes.hidden}>
+              <Link title="Home" color="inherit" to={routes[lang].HOME}>
+                Home
+              </Link>
               <Link title={twhelpText} color="inherit" href={twhelpUrl}>
                 {twhelpText}
               </Link>
@@ -80,6 +85,16 @@ function Header({ title, twhelpUrl, lang }) {
               >
                 <MenuItem>
                   <Link
+                    title="Home"
+                    color="inherit"
+                    underline="none"
+                    href={routes[lang].HOME}
+                  >
+                    Home
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <Link
                     title={twhelpText}
                     color="inherit"
                     underline="none"
@@ -90,7 +105,7 @@ function Header({ title, twhelpUrl, lang }) {
                 </MenuItem>
               </Menu>
             </Hidden>
-          </div>
+          </nav>
         </Toolbar>
       </Container>
     </AppBar>
