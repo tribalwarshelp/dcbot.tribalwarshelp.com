@@ -61,7 +61,7 @@ function LanguageSelector({ lang, languages, pathname }) {
   );
 }
 
-Header.propTypes = {
+LanguageSelector.propTypes = {
   lang: PropTypes.string.isRequired,
   pathname: PropTypes.string.isRequired,
   languages: PropTypes.arrayOf(PropTypes.string),
