@@ -95,7 +95,7 @@ function Header({ twhelpUrl, lang, languages, pathname }) {
                     className={classes.link}
                     to={routes[lang].HOME}
                   >
-                    Homepage
+                    Home
                   </Link>
                 </MenuItem>
                 <MenuItem>

@@ -5,7 +5,7 @@ export default {
   header: {
     title: "Obserwuj podboje swojego plemienia!",
     description:
-      "Ten powiadamia Ciebie o podbitej/straconej wiosce w czasie rzeczywistym.",
+      "Ten bot powiadamia Ciebie o podbitej/straconej wiosce w czasie rzeczywistym.",
     inviteBot: "Zaproś bota na swój serwer",
     commands: "Komendy",
   },
