@@ -27,8 +27,8 @@ module.exports = {
         name: `Tribal Wars Bot`,
         short_name: `twdcbot`,
         start_url: `/`,
-        background_color: `#330033`,
-        theme_color: `#330033`,
+        background_color: `#303032`,
+        theme_color: `#303032`,
         display: `minimal-ui`,
         icon: `src/images/icon.svg`, // This path is relative to the root of the site.
       },

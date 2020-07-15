@@ -1,12 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { ThemeProvider, makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 import Header from "./Header";
 import Footer from "./Footer";
-import theme from "./theme";
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -45,7 +44,7 @@ const Layout = ({
   );
 
   return (
-    <ThemeProvider theme={theme}>
+    <Fragment>
       {showHeader && (
         <Header
           twhelpUrl={site.siteMetadata.twhelpUrl}
@@ -61,7 +60,7 @@ const Layout = ({
       </main>
       {showFooter && <Footer title={site.siteMetadata.title} lang={lang} />}
       <CssBaseline />
-    </ThemeProvider>
+    </Fragment>
   );
 };
 

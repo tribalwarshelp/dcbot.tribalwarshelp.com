@@ -5,7 +5,7 @@ export default {
   header: {
     title: "Observe your tribe ennoblements!",
     description:
-      "This bot notifies you about conquered/lost village by a tribe near real-time.",
+      "This bot notifies you about conquered/lost village near real-time.",
     inviteBot: "Invite bot to your server",
     commands: "Commands",
   },

@@ -10,7 +10,7 @@ const commandsForAll = [
     commandSyntax:
       "tw!tribe topatt [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
-      "This command generates player list with the most ODA from selected tribes.",
+      "This command generates player list from selected tribes ordered by ODA.",
     example: "tw!tribe topatt pl143 1 975 170",
   },
   {
@@ -18,7 +18,7 @@ const commandsForAll = [
     commandSyntax:
       "tw!tribe topdef [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
-      "This command generates player list with the most ODD from selected tribes.",
+      "This command generates player list from selected tribes ordered by ODD.",
     example: "tw!tribe topdef pl143 1 975 170",
   },
   {
@@ -26,7 +26,7 @@ const commandsForAll = [
     commandSyntax:
       "tw!tribe topsupp [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
-      "This command generates player list with the most ODS from selected tribes.",
+      "This command generates player list from selected tribes ordered by ODS.",
     example: "tw!tribe topsupp pl143 1 975 170",
   },
   {
@@ -34,7 +34,7 @@ const commandsForAll = [
     commandSyntax:
       "tw!tribe toptotal [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
-      "This command generates player list with the most OD from selected tribes.",
+      "This command generates player list from selected tribes ordered by OD.",
     example: "tw!tribe toptotal pl143 1 975 170",
   },
   {
@@ -111,6 +111,13 @@ const adminCommands = [
     commandSyntax: "tw!unobservelostvillages [group ID from tw!groups]",
     description: "This command disable notifications about lost villages.",
     example: "tw!unobservelostvillages 1",
+  },
+  {
+    command: " tw!showennobledbarbs",
+    commandSyntax: " tw!showennobledbarbs [group ID from tw!groups]",
+    description:
+      "This command enables/disables notifications about barbarian villages ennoblements.",
+    example: "tw!showennobledbarbs 1",
   },
 ];
 

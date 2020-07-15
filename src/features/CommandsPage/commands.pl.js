@@ -111,6 +111,13 @@ const adminCommands = [
     description: "Wyłącza powiadomienia o straconych wioskach w danej grupie.",
     example: "tw!unobservelostvillages 1",
   },
+  {
+    command: " tw!showennobledbarbs",
+    commandSyntax: " tw!showennobledbarbs [group ID from tw!groups]",
+    description:
+      "Włącza/wyłącza informacje o podbitych wioskach barbarzyńskich.",
+    example: "tw!showennobledbarbs 1",
+  },
 ];
 
 export default {
