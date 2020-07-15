@@ -3,7 +3,7 @@ const siteUrl = "https://dcbot.tribalwarshelp.com";
 module.exports = {
   siteMetadata: {
     title: `TWHelp Discord Bot`,
-    description: `Live notifications about lost/conquered village by a tribe in the game TribalWars.`,
+    description: `Discord bot for online game Tribalwars. | Notifications about lost/conquered village in near real-time.`,
     siteUrl,
     twhelpUrl: "https://tribalwarshelp.com",
     botInviteUrl:
