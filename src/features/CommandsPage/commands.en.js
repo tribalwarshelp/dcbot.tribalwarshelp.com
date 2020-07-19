@@ -80,11 +80,11 @@ const adminCommands = [
     example: "tw!observations 1",
   },
   {
-    command: "tw!unobserve",
+    command: "tw!deleteobservation",
     commandSyntax:
-      "tw!unobserve [group ID from tw!groups] [id from tw!observations]",
-    description: "This command removes a tribe to the observation group.",
-    example: "tw!unobserve 1 pl143 975 170",
+      "tw!deleteobservation [group ID from tw!groups] [id from tw!observations]",
+    description: "This command removes a tribe from the observation group.",
+    example: "tw!deleteobservation 1 pl143 975 170",
   },
   {
     command: "tw!conqueredvillages",
@@ -101,23 +101,29 @@ const adminCommands = [
     example: "tw!lostvillages 2",
   },
   {
-    command: "tw!unobserveconqueredvillages",
-    commandSyntax: "tw!unobserveconqueredvillages [group ID from tw!groups]",
+    command: "tw!disableconqueredvillages",
+    commandSyntax: "tw!disableconqueredvillages [group ID from tw!groups]",
     description: "This command disable notifications about conquered villages.",
-    example: "tw!unobserveconqueredvillages 1",
+    example: "tw!disableconqueredvillages 1",
   },
   {
-    command: "tw!unobservelostvillages",
-    commandSyntax: "tw!unobservelostvillages [group ID from tw!groups]",
+    command: "tw!disablelostvillages",
+    commandSyntax: "tw!disablelostvillages [group ID from tw!groups]",
     description: "This command disable notifications about lost villages.",
-    example: "tw!unobservelostvillages 1",
+    example: "tw!disablelostvillages 1",
   },
   {
     command: " tw!showennobledbarbs",
     commandSyntax: " tw!showennobledbarbs [group ID from tw!groups]",
     description:
-      "This command enables/disables notifications about barbarian villages ennoblements.",
+      "This command enables/disables notifications about ennobling barbarian villages.",
     example: "tw!showennobledbarbs 1",
+  },
+  {
+    command: " tw!changelanguage",
+    commandSyntax: " tw!changelanguage [en | pl]",
+    description: "This command changes bot language.",
+    example: "tw!changelanguage en",
   },
 ];
 

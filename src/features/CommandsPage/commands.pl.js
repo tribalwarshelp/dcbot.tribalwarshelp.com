@@ -80,10 +80,11 @@ const adminCommands = [
     example: "tw!observations 1",
   },
   {
-    command: "tw!unobserve",
-    commandSyntax: "tw!unobserve [ID grupy z tw!groups] [id z tw!observations]",
+    command: "tw!deleteobservation",
+    commandSyntax:
+      "tw!deleteobservation [ID grupy z tw!groups] [id z tw!observations]",
     description: "Usuwa plemię z grupy.",
-    example: "tw!unobserve 1 pl143 975 170",
+    example: "tw!deleteobservation 1 pl143 975 170",
   },
   {
     command: "tw!conqueredvillages",
@@ -100,16 +101,16 @@ const adminCommands = [
     example: "tw!lostvillages 2",
   },
   {
-    command: "tw!unobserveconqueredvillages",
-    commandSyntax: "tw!unobserveconqueredvillages [ID grupy z tw!groups]",
+    command: "tw!disableconqueredvillages",
+    commandSyntax: "tw!disableconqueredvillages [ID grupy z tw!groups]",
     description: "Wyłącza powiadomienia o podbitych wioskach w danej grupie.",
-    example: "tw!unobserveconqueredvillages 1",
+    example: "tw!disableconqueredvillages 1",
   },
   {
-    command: "tw!unobservelostvillages",
-    commandSyntax: "tw!unobservelostvillages [ID grupy z tw!groups]",
+    command: "tw!disablelostvillages",
+    commandSyntax: "tw!disablelostvillages [ID grupy z tw!groups]",
     description: "Wyłącza powiadomienia o straconych wioskach w danej grupie.",
-    example: "tw!unobservelostvillages 1",
+    example: "tw!disablelostvillages 1",
   },
   {
     command: " tw!showennobledbarbs",
@@ -117,6 +118,12 @@ const adminCommands = [
     description:
       "Włącza/wyłącza informacje o podbitych wioskach barbarzyńskich.",
     example: "tw!showennobledbarbs 1",
+  },
+  {
+    command: " tw!changelanguage",
+    commandSyntax: " tw!changelanguage [en | pl]",
+    description: "Zmienia język w którym są wyświetlane odpowiedzi od bota.",
+    example: "tw!changelanguage pl",
   },
 ];
 
