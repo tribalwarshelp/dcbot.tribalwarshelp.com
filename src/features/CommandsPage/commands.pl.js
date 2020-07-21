@@ -114,7 +114,7 @@ const adminCommands = [
   },
   {
     command: " tw!showennobledbarbs",
-    commandSyntax: " tw!showennobledbarbs [group ID from tw!groups]",
+    commandSyntax: " tw!showennobledbarbs [ID grupy z tw!groups]",
     description:
       "Włącza/wyłącza informacje o podbitych wioskach barbarzyńskich.",
     example: "tw!showennobledbarbs 1",
@@ -124,6 +124,13 @@ const adminCommands = [
     commandSyntax: " tw!changelanguage [en | pl]",
     description: "Zmienia język w którym są wyświetlane odpowiedzi od bota.",
     example: "tw!changelanguage pl",
+  },
+  {
+    command: " tw!showselfconquers",
+    commandSyntax: " tw!showselfconquers [ID grupy z tw!groups]",
+    description:
+      "Włącza/wyłącza notyfikacje o podbiciach plemion należących do jednej grupy.",
+    example: "tw!showselfconquers 1",
   },
 ];
 
