@@ -37,6 +37,7 @@ const Layout = ({
             title
             twhelpUrl
             languages
+            author
           }
         }
       }
@@ -58,7 +59,7 @@ const Layout = ({
       >
         <div className={classes.mainChild}>{children}</div>
       </main>
-      {showFooter && <Footer title={site.siteMetadata.title} lang={lang} />}
+      {showFooter && <Footer author={site.siteMetadata.author} lang={lang} />}
       <CssBaseline />
     </Fragment>
   );

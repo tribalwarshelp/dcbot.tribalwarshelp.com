@@ -25,7 +25,7 @@ const locales = {
   },
 };
 
-function Footer({ title, lang }) {
+function Footer({ author, lang }) {
   const classes = useStyles();
   const translations = locales[lang] || locales["en"];
 
@@ -38,7 +38,7 @@ function Footer({ title, lang }) {
             <Link color="secondary" href="https://svgbackgrounds.com">
               svgbackgrounds.com
             </Link>
-            . <br /> &copy; {new Date().getFullYear()} {title}
+            . <br /> &copy; {new Date().getFullYear()} {author}
           </Typography>
         </Toolbar>
       </Container>
@@ -47,7 +47,7 @@ function Footer({ title, lang }) {
 }
 
 Footer.propTypes = {
-  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
   lang: PropTypes.string.isRequired,
 };
 

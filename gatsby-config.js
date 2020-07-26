@@ -3,12 +3,13 @@ const siteUrl = "https://dcbot.tribalwarshelp.com";
 module.exports = {
   siteMetadata: {
     title: `TWHelp Discord Bot`,
-    description: `Discord bot for online game Tribalwars. | Notifications about lost/conquered village in near real-time.`,
+    description: `Discord bot for online game Tribalwars. | Real-time notifications about lost/conquered village.`,
     siteUrl,
     twhelpUrl: "https://tribalwarshelp.com",
     botInviteUrl:
       "https://discord.com/oauth2/authorize?client_id=707859810900508703&scope=bot&permissions=8",
     languages: ["en", "pl"],
+    author: "Dawid Wysokiński",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
