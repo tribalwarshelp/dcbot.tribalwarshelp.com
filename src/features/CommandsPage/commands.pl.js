@@ -126,11 +126,11 @@ const adminCommands = [
     example: "tw!changelanguage pl",
   },
   {
-    command: " tw!showselfconquers",
-    commandSyntax: " tw!showselfconquers [ID grupy z tw!groups]",
+    command: " tw!showinternals",
+    commandSyntax: " tw!showinternals [ID grupy z tw!groups]",
     description:
       "Włącza/wyłącza notyfikacje o podbiciach plemion należących do jednej grupy.",
-    example: "tw!showselfconquers 1",
+    example: "tw!showinternals 1",
   },
 ];
 

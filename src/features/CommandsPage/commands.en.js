@@ -126,11 +126,11 @@ const adminCommands = [
     example: "tw!changelanguage en",
   },
   {
-    command: " tw!showselfconquers",
-    commandSyntax: " tw!showselfconquers [group ID from tw!groups]",
+    command: " tw!showinternals",
+    commandSyntax: " tw!showinternals [group ID from tw!groups]",
     description:
       "This command enables/disables notifications about self-conquers between tribes in one group.",
-    example: "tw!showselfconquers 1",
+    example: "tw!showinternals 1",
   },
 ];
 
