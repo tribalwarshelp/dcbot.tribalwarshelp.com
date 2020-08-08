@@ -6,36 +6,36 @@ const commandsForAll = [
     example: "tw!help",
   },
   {
-    command: "tw!tribe topatt",
+    command: "tw!tribe topoda",
     commandSyntax:
-      "tw!tribe topatt [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
+      "tw!tribe topoda [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
       "This command generates player list from selected tribes ordered by ODA.",
-    example: "tw!tribe topatt pl143 1 975 170",
+    example: "tw!tribe topoda pl143 1 975 170",
   },
   {
-    command: "tw!tribe topdef",
+    command: "tw!tribe topodd",
     commandSyntax:
-      "tw!tribe topdef [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
+      "tw!tribe topodd [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
       "This command generates player list from selected tribes ordered by ODD.",
-    example: "tw!tribe topdef pl143 1 975 170",
+    example: "tw!tribe topodd pl143 1 975 170",
   },
   {
-    command: "tw!tribe topsupp",
+    command: "tw!tribe topods",
     commandSyntax:
-      "tw!tribe topsupp [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
+      "tw!tribe topods [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
       "This command generates player list from selected tribes ordered by ODS.",
-    example: "tw!tribe topsupp pl143 1 975 170",
+    example: "tw!tribe topods pl143 1 975 170",
   },
   {
-    command: "tw!tribe toptotal",
+    command: "tw!tribe topod",
     commandSyntax:
-      "tw!tribe toptotal [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
+      "tw!tribe topod [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
       "This command generates player list from selected tribes ordered by OD.",
-    example: "tw!tribe toptotal pl143 1 975 170",
+    example: "tw!tribe topod pl143 1 975 170",
   },
   {
     command: "tw!tribe toppoints",
@@ -129,7 +129,7 @@ const adminCommands = [
     command: " tw!showinternals",
     commandSyntax: " tw!showinternals [group ID from tw!groups]",
     description:
-      "This command enables/disables notifications about self-conquers between tribes in one group.",
+      "This command enables/disables notifications about in-group/in-tribe conquering.",
     example: "tw!showinternals 1",
   },
 ];

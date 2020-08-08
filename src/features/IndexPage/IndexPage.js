@@ -43,16 +43,28 @@ const IndexPage = ({ location, pageContext }) => {
           botInviteUrl
         }
       }
-      ss: file(relativePath: { eq: "ss.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 593, quality: 100) {
-            ...GatsbyImageSharpFluid
+      allSs: allFile(filter: { absolutePath: { regex: "/screenshots/" } }) {
+        edges {
+          node {
+            relativePath
+            childImageSharp {
+              id
+              fluid(maxWidth: 593, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
           }
         }
       }
     }
   `);
   const t = translations[pageContext.langKey];
+  console.log(data.allSs);
+  const ss = data.allSs.edges.find(edge => {
+    console.log(edge);
+    if (edge.node.relativePath.includes(pageContext.langKey)) return edge;
+    return null;
+  });
 
   return (
     <Layout lang={pageContext.langKey} pathname={location.pathname}>
@@ -95,7 +107,7 @@ const IndexPage = ({ location, pageContext }) => {
           <Grid item xs={12} md={5}>
             <Image
               className={classes.image}
-              fluid={data.ss.childImageSharp.fluid}
+              fluid={ss.node.childImageSharp.fluid}
               alt={data.site.siteMetadata.title}
             />
           </Grid>
