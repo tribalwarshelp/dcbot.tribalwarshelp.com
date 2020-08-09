@@ -120,17 +120,29 @@ const adminCommands = [
     example: "tw!showennobledbarbs 1",
   },
   {
+    command: " tw!showinternals",
+    commandSyntax: " tw!showinternals [ID grupy z tw!groups]",
+    description:
+      "Włącza/wyłącza notyfikacje o podbiciach plemion należących do jednej grupy.",
+    example: "tw!showinternals 1",
+  },
+  {
     command: " tw!changelanguage",
     commandSyntax: " tw!changelanguage [en | pl]",
     description: "Zmienia język w którym są wyświetlane odpowiedzi od bota.",
     example: "tw!changelanguage pl",
   },
   {
-    command: " tw!showinternals",
-    commandSyntax: " tw!showinternals [ID grupy z tw!groups]",
-    description:
-      "Włącza/wyłącza notyfikacje o podbiciach plemion należących do jednej grupy.",
-    example: "tw!showinternals 1",
+    command: " tw!coordstranslation",
+    commandSyntax: " tw!coordstranslation [serwer]",
+    description: "Włącza translator koordynat.",
+    example: "tw!coordstranslation pl153",
+  },
+  {
+    command: " tw!disablecoordstranslation",
+    commandSyntax: " tw!disablecoordstranslation",
+    description: "Wyłącza translator koordynat.",
+    example: "tw!disablecoordstranslation",
   },
 ];
 

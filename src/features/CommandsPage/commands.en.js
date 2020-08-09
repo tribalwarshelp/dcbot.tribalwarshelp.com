@@ -120,17 +120,29 @@ const adminCommands = [
     example: "tw!showennobledbarbs 1",
   },
   {
+    command: " tw!showinternals",
+    commandSyntax: " tw!showinternals [group ID from tw!groups]",
+    description:
+      "This command enables/disables notifications about in-group/in-tribe conquering.",
+    example: "tw!showinternals 1",
+  },
+  {
     command: " tw!changelanguage",
     commandSyntax: " tw!changelanguage [en | pl]",
     description: "This command changes bot language.",
     example: "tw!changelanguage en",
   },
   {
-    command: " tw!showinternals",
-    commandSyntax: " tw!showinternals [group ID from tw!groups]",
-    description:
-      "This command enables/disables notifications about in-group/in-tribe conquering.",
-    example: "tw!showinternals 1",
+    command: " tw!coordstranslation",
+    commandSyntax: " tw!coordstranslation [server]",
+    description: "This command enables coords translation feature.",
+    example: "tw!coordstranslation pl153",
+  },
+  {
+    command: " tw!disablecoordstranslation",
+    commandSyntax: " tw!disablecoordstranslation",
+    description: "This command disables coords translation feature.",
+    example: "tw!disablecoordstranslation",
   },
 ];
 
