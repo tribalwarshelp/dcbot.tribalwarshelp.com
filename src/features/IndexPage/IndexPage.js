@@ -50,7 +50,7 @@ const IndexPage = ({ location, pageContext }) => {
             childImageSharp {
               id
               fluid(maxWidth: 593, quality: 100) {
-                ...GatsbyImageSharpFluid_withWebp
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -59,9 +59,7 @@ const IndexPage = ({ location, pageContext }) => {
     }
   `);
   const t = translations[pageContext.langKey];
-  console.log(data.allSs);
   const ss = data.allSs.edges.find(edge => {
-    console.log(edge);
     if (edge.node.relativePath.includes(pageContext.langKey)) return edge;
     return null;
   });
