@@ -128,7 +128,7 @@ const adminCommands = [
   },
   {
     command: " tw!changelanguage",
-    commandSyntax: " tw!changelanguage [en | pl]",
+    commandSyntax: " tw!changelanguage [en | nl | pl]",
     description: "Zmienia język w którym są wyświetlane odpowiedzi od bota.",
     example: "tw!changelanguage pl",
   },
