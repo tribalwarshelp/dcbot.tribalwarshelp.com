@@ -2,6 +2,8 @@
 
 Simple website with all available [TWHelp Discord Bot](https://github.com/tribalwarshelp/dcbot) commands, invitation link, etc.
 
+![Screenshot](/screenshots/indexpage.png?raw=true)
+
 ## Development
 
 ### Prerequisites
