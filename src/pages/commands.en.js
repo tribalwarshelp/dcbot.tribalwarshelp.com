@@ -1,3 +1,3 @@
-import CommandsPage from "@features/CommandsPage/CommandsPage";
+import CommandsPage from '@features/CommandsPage/CommandsPage';
 
 export default CommandsPage;

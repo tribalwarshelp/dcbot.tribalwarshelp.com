@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import { makeStyles } from "@material-ui/core/styles";
-import { Container, Typography } from "@material-ui/core";
-import { Link } from "gatsby-theme-material-ui";
-import Layout from "@components/Layout/Layout";
-import SEO from "@components/SEO";
+import { makeStyles } from '@material-ui/core/styles';
+import { Container, Typography } from '@material-ui/core';
+import { Link } from 'gatsby-theme-material-ui';
+import Layout from '@components/Layout/Layout';
+import SEO from '@components/SEO';
 
 const useStyles = makeStyles(() => ({
   container: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    textAlign: "center",
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    textAlign: 'center',
   },
   layout: {
-    minHeight: "100vh",
+    minHeight: '100vh',
   },
 }));
 

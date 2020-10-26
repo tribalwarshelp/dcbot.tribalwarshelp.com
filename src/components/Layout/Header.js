@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import routes from "@config/routes";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import routes from '@config/routes';
 
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -10,24 +10,24 @@ import {
   Hidden,
   Menu,
   MenuItem,
-} from "@material-ui/core";
-import { Menu as MenuIcon } from "@material-ui/icons";
-import { Link, IconButton } from "gatsby-theme-material-ui";
-import LanguageSelector from "./LanguageSelector";
+} from '@material-ui/core';
+import { Menu as MenuIcon } from '@material-ui/icons';
+import { Link, IconButton } from 'gatsby-theme-material-ui';
+import LanguageSelector from './LanguageSelector';
 
 const useStyles = makeStyles(theme => ({
   appBar: {
-    backgroundColor: "transparent",
-    color: "#fff",
-    boxShadow: "none",
+    backgroundColor: 'transparent',
+    color: '#fff',
+    boxShadow: 'none',
   },
   hidden: {
-    "& > *:not(:last-child)": {
+    '& > *:not(:last-child)': {
       marginRight: theme.spacing(1),
     },
   },
   link: {
-    width: "100%",
+    width: '100%',
   },
 }));
 
@@ -35,7 +35,7 @@ function Header({ twhelpUrl, lang, languages, pathname }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const classes = useStyles();
   const open = Boolean(anchorEl);
-  const twhelpText = twhelpUrl.replace("http://", "").replace("https://", "");
+  const twhelpText = twhelpUrl.replace('http://', '').replace('https://', '');
 
   const handleMenuOpen = event => {
     setAnchorEl(event.currentTarget);
@@ -75,13 +75,13 @@ function Header({ twhelpUrl, lang, languages, pathname }) {
               <Menu
                 anchorEl={anchorEl}
                 anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
+                  vertical: 'top',
+                  horizontal: 'right',
                 }}
                 keepMounted
                 transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
+                  vertical: 'top',
+                  horizontal: 'right',
                 }}
                 open={open}
                 onClose={handleMenuClose}

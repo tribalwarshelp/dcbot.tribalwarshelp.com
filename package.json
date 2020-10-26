@@ -1,7 +1,7 @@
 {
   "name": "dcbot-website",
   "private": true,
-  "description": "Tribal Wars Discord Bot website",
+  "description": "TWHelp Discord Bot website",
   "version": "0.1.0",
   "author": "Dawid Wysokiński <xyztojajestem@gmail.com>",
   "dependencies": {

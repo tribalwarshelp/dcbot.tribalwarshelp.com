@@ -1,10 +1,10 @@
 export default {
-  title: "Commands",
-  description: "List of commands offered by TWHelp Discord Bot with examples",
+  title: 'Commands',
+  description: 'List of commands offered by TWHelp Discord Bot with examples',
   commandsForEveryoneSection: {
-    title: "For everyone",
+    title: 'For everyone',
   },
   adminCommandsSection: {
-    title: "For admins",
+    title: 'For admins',
   },
 };

@@ -1,10 +1,10 @@
 const pl = {
-  HOME: "/pl/",
-  COMMANDS_PAGE: "/pl/commands/",
+  HOME: '/pl/',
+  COMMANDS_PAGE: '/pl/commands/',
 };
 const en = {
-  HOME: "/",
-  COMMANDS_PAGE: "/commands/",
+  HOME: '/',
+  COMMANDS_PAGE: '/commands/',
 };
 
 export default {

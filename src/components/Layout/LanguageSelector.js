@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import plFlag from "@images/flags/pl.svg";
-import usaFlag from "@images/flags/usa.svg";
+import React from 'react';
+import PropTypes from 'prop-types';
+import plFlag from '@images/flags/pl.svg';
+import usaFlag from '@images/flags/usa.svg';
 
-import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "gatsby-theme-material-ui";
+import { makeStyles } from '@material-ui/core/styles';
+import { Link } from 'gatsby-theme-material-ui';
 
 const flags = {
   pl: plFlag,
@@ -14,24 +14,24 @@ const flags = {
 const useStyles = makeStyles(theme => ({
   languageSelector: {
     flexGrow: 1,
-    display: "flex",
-    "& > *:not(:last-child)": {
+    display: 'flex',
+    '& > *:not(:last-child)': {
       marginRight: theme.spacing(1),
     },
   },
   flagWrapper: {
-    cursor: "pointer",
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    cursor: 'pointer',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   flag: {
-    width: "auto",
-    height: "25px",
-    transition: "all .2s",
-    "&:hover": {
-      transform: "scale(1.1)",
+    width: 'auto',
+    height: '25px',
+    transition: 'all .2s',
+    '&:hover': {
+      transform: 'scale(1.1)',
     },
   },
 }));
@@ -51,7 +51,7 @@ function LanguageSelector({ lang, languages, pathname }) {
       {languages.map(l => (
         <Link
           key={l}
-          to={buildURL(l).replace(`/${languages[0]}/`, "/")}
+          to={buildURL(l).replace(`/${languages[0]}/`, '/')}
           className={classes.flagWrapper}
         >
           <img className={classes.flag} src={flags[l]} alt={l} />

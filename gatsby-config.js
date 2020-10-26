@@ -1,15 +1,15 @@
-const siteUrl = "https://dcbot.tribalwarshelp.com";
+const siteUrl = 'https://dcbot.tribalwarshelp.com';
 
 module.exports = {
   siteMetadata: {
     title: `TWHelp Discord Bot`,
     description: `Discord bot for online game Tribalwars. | Real-time notifications about lost/conquered village.`,
     siteUrl,
-    twhelpUrl: "https://tribalwarshelp.com",
+    twhelpUrl: 'https://tribalwarshelp.com',
     botInviteUrl:
-      "https://discord.com/oauth2/authorize?client_id=707859810900508703&scope=bot&permissions=8",
-    languages: ["en", "pl"],
-    author: "Dawid Wysokiński",
+      'https://discord.com/oauth2/authorize?client_id=707859810900508703&scope=bot&permissions=8',
+    languages: ['en', 'pl'],
+    author: 'Dawid Wysokiński',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -37,25 +37,25 @@ module.exports = {
     `gatsby-theme-material-ui`,
     `gatsby-plugin-sitemap`,
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: siteUrl,
-        sitemap: siteUrl + "/sitemap.xml",
+        sitemap: siteUrl + '/sitemap.xml',
         env: {
           development: {
-            policy: [{ userAgent: "*", disallow: ["/"] }],
+            policy: [{ userAgent: '*', disallow: ['/'] }],
           },
           production: {
-            policy: [{ userAgent: "*", allow: "/" }],
+            policy: [{ userAgent: '*', allow: '/' }],
           },
         },
       },
     },
     {
-      resolve: "gatsby-plugin-i18n",
+      resolve: 'gatsby-plugin-i18n',
       options: {
-        langKeyDefault: "en",
-        langKeyForNull: "en",
+        langKeyDefault: 'en',
+        langKeyForNull: 'en',
         useLangKeyLayout: false,
         prefixDefault: false,
       },

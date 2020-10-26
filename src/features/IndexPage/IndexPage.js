@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-import routes from "@config/routes";
-import translations from "./translations";
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import routes from '@config/routes';
+import translations from './translations';
 
-import { makeStyles } from "@material-ui/core/styles";
-import Image from "gatsby-image";
+import { makeStyles } from '@material-ui/core/styles';
+import Image from 'gatsby-image';
 import {
   Container,
   Typography,
@@ -12,24 +12,24 @@ import {
   Divider,
   ButtonGroup,
   Grid,
-} from "@material-ui/core";
-import { Link } from "gatsby-theme-material-ui";
-import Layout from "@components/Layout/Layout";
-import SEO from "@components/SEO";
+} from '@material-ui/core';
+import { Link } from 'gatsby-theme-material-ui';
+import Layout from '@components/Layout/Layout';
+import SEO from '@components/SEO';
 
 const useStyles = makeStyles(theme => ({
   divider: {
     margin: theme.spacing(2, 0),
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
   },
   container: {
-    display: "flex",
-    alignItems: "center",
+    display: 'flex',
+    alignItems: 'center',
   },
   image: {
-    margin: "auto",
-    borderRadius: "6px",
-    maxWidth: "593px",
+    margin: 'auto',
+    borderRadius: '6px',
+    maxWidth: '593px',
   },
 }));
 
@@ -43,7 +43,9 @@ const IndexPage = ({ location, pageContext }) => {
           botInviteUrl
         }
       }
-      screenshots: allFile(filter: { absolutePath: { regex: "/screenshots/" } }) {
+      screenshots: allFile(
+        filter: { absolutePath: { regex: "/screenshots/" } }
+      ) {
         edges {
           node {
             relativePath

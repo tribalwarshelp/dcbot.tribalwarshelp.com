@@ -1,12 +1,12 @@
 export default {
-  title: "Home",
+  title: 'Home',
   description:
-    "Discord bot for the online game Tribalwars. | Real-time notifications about lost/conquered village.",
+    'Discord bot for the online game Tribalwars. | Real-time notifications about lost/conquered village.',
   header: {
-    title: "Observe your tribe ennoblements!",
+    title: 'Observe your tribe ennoblements!',
     description:
-      "This bot notifies you of conquered/lost village in near real-time.",
-    inviteBot: "Invite bot to your server",
-    commands: "Commands",
+      'This bot notifies you of conquered/lost village in near real-time.',
+    inviteBot: 'Invite bot to your server',
+    commands: 'Commands',
   },
 };

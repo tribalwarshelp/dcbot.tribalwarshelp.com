@@ -1,11 +1,11 @@
-import React from "react";
-import translations from "./translations";
-import commands from "./commands";
+import React from 'react';
+import translations from './translations';
+import commands from './commands';
 
-import { Container, Typography, Grid, Box } from "@material-ui/core";
-import Layout from "@components/Layout/Layout";
-import SEO from "@components/SEO";
-import Command from "./Command";
+import { Container, Typography, Grid, Box } from '@material-ui/core';
+import Layout from '@components/Layout/Layout';
+import SEO from '@components/SEO';
+import Command from './Command';
 
 const CommandsPage = ({ location, pageContext }) => {
   const t = translations[pageContext.langKey];

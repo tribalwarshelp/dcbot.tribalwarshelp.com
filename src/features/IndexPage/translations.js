@@ -1,5 +1,5 @@
-import en from "./translations.en";
-import pl from "./translations.pl";
+import en from './translations.en';
+import pl from './translations.pl';
 
 export default {
   en,

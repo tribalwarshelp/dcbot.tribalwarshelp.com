@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Card, CardHeader, CardContent, Typography } from "@material-ui/core";
+import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';
 
 function Command({ command, commandSyntax, description, example }) {
   return (

@@ -1,12 +1,12 @@
 export default {
-  title: "Strona główna",
+  title: 'Strona główna',
   description:
-    "Bot na Discorda dla gry Plemiona. | Notyfikacje o podbiciu/stracie wioski w czasie rzeczywistym.",
+    'Bot na Discorda dla gry Plemiona. | Notyfikacje o podbiciu/stracie wioski w czasie rzeczywistym.',
   header: {
-    title: "Obserwuj podboje swojego plemienia!",
+    title: 'Obserwuj podboje swojego plemienia!',
     description:
-      "Ten bot powiadamia Ciebie o podbitej/straconej wiosce w czasie rzeczywistym.",
-    inviteBot: "Zaproś bota na swój serwer",
-    commands: "Komendy",
+      'Ten bot powiadamia Ciebie o podbitej/straconej wiosce w czasie rzeczywistym.',
+    inviteBot: 'Zaproś bota na swój serwer',
+    commands: 'Komendy',
   },
 };
