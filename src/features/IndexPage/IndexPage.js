@@ -43,7 +43,7 @@ const IndexPage = ({ location, pageContext }) => {
           botInviteUrl
         }
       }
-      allSs: allFile(filter: { absolutePath: { regex: "/screenshots/" } }) {
+      screenshots: allFile(filter: { absolutePath: { regex: "/screenshots/" } }) {
         edges {
           node {
             relativePath
@@ -59,7 +59,7 @@ const IndexPage = ({ location, pageContext }) => {
     }
   `);
   const t = translations[pageContext.langKey];
-  const ss = data.allSs.edges.find(edge => {
+  const ss = data.screenshots.edges.find(edge => {
     if (edge.node.relativePath.includes(pageContext.langKey)) return edge;
     return null;
   });

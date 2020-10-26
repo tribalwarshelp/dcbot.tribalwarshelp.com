@@ -1,4 +1,4 @@
-const commandsForAll = [
+const commandsForEveryone = [
   {
     command: "tw!help",
     commandSyntax: "tw!help",
@@ -147,6 +147,6 @@ const adminCommands = [
 ];
 
 export default {
-  commandsForAll,
+  commandsForEveryone,
   adminCommands,
 };

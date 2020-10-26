@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 function LanguageSelector({ lang, languages, pathname }) {
   const classes = useStyles();
 
-  const formatURL = l => {
+  const buildURL = l => {
     if (pathname.includes(lang)) {
       return pathname.replace(lang, l);
     }
@@ -51,7 +51,7 @@ function LanguageSelector({ lang, languages, pathname }) {
       {languages.map(l => (
         <Link
           key={l}
-          to={formatURL(l).replace(`/${languages[0]}/`, "/")}
+          to={buildURL(l).replace(`/${languages[0]}/`, "/")}
           className={classes.flagWrapper}
         >
           <img className={classes.flag} src={flags[l]} alt={l} />

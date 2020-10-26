@@ -1,7 +1,7 @@
 export default {
   title: "Strona główna",
   description:
-    "Powiadomienia o podbiciu/straceniu wioski przez plemię w grze TribalWars na Twoim serwerze Discord.",
+    "Bot na Discorda dla gry Plemiona. | Notyfikacje o podbiciu/stracie wioski w czasie rzeczywistym.",
   header: {
     title: "Obserwuj podboje swojego plemienia!",
     description:

@@ -1,4 +1,4 @@
-const commandsForAll = [
+const commandsForEveryone = [
   {
     command: "tw!help",
     commandSyntax: "tw!help",
@@ -10,7 +10,7 @@ const commandsForAll = [
     commandSyntax:
       "tw!tribe topoda [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
-      "This command generates player list from selected tribes ordered by ODA.",
+      "This command generates a player list from selected tribes ordered by ODA.",
     example: "tw!tribe topoda pl143 1 975 170",
   },
   {
@@ -18,7 +18,7 @@ const commandsForAll = [
     commandSyntax:
       "tw!tribe topodd [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
-      "This command generates player list from selected tribes ordered by ODD.",
+      "This command generates a player list from selected tribes ordered by ODD.",
     example: "tw!tribe topodd pl143 1 975 170",
   },
   {
@@ -26,7 +26,7 @@ const commandsForAll = [
     commandSyntax:
       "tw!tribe topods [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
-      "This command generates player list from selected tribes ordered by ODS.",
+      "This command generates a player list from selected tribes ordered by ODS.",
     example: "tw!tribe topods pl143 1 975 170",
   },
   {
@@ -34,7 +34,7 @@ const commandsForAll = [
     commandSyntax:
       "tw!tribe topod [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
-      "This command generates player list from selected tribes ordered by OD.",
+      "This command generates a player list from selected tribes ordered by OD.",
     example: "tw!tribe topod pl143 1 975 170",
   },
   {
@@ -42,7 +42,7 @@ const commandsForAll = [
     commandSyntax:
       "tw!tribe toppoints [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]",
     description:
-      "This command generates player list from selected tribes ordered by points.",
+      "This command generates a player list from selected tribes ordered by points.",
     example: "tw!tribe toppoints pl143 1 975 170",
   },
 ];
@@ -58,7 +58,7 @@ const adminCommands = [
     command: "tw!groups",
     commandSyntax: "tw!addgroup",
     description:
-      "This command shows you a list of groups created by this guild.",
+      "This command shows you a list of groups created by this server.",
     example: "tw!addgroup",
   },
   {
@@ -76,7 +76,8 @@ const adminCommands = [
   {
     command: "tw!observations",
     commandSyntax: "tw!observations [group ID from tw!groups]",
-    description: "This command shows a list of observed tribes by this group.",
+    description:
+      "This command shows a list of monitored tribes added to this group.",
     example: "tw!observations 1",
   },
   {
@@ -147,6 +148,6 @@ const adminCommands = [
 ];
 
 export default {
-  commandsForAll,
+  commandsForEveryone,
   adminCommands,
 };

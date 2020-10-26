@@ -22,10 +22,10 @@ const CommandsPage = ({ location, pageContext }) => {
       <Container>
         <Box mb={3} component="section">
           <Typography variant="h2" component="h1" align="center" gutterBottom>
-            {t.commandsForAllSection.title}
+            {t.commandsForEveryoneSection.title}
           </Typography>
           <Grid container spacing={2}>
-            {c.commandsForAll.map(cmd => (
+            {c.commandsForEveryone.map(cmd => (
               <Grid key={cmd.command} item xs={12} sm={6}>
                 <Command {...cmd} />
               </Grid>
