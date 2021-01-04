@@ -35,9 +35,7 @@ function Footer({ author, lang }) {
         <Toolbar disableGutters>
           <Typography align="center" className={classes.copyright}>
             {translations.backgroundCredits}{' '}
-            <Link color="secondary" href="https://svgbackgrounds.com">
-              svgbackgrounds.com
-            </Link>
+            <Link href="https://svgbackgrounds.com">svgbackgrounds.com</Link>
             . <br /> &copy; {new Date().getFullYear()} {author}
           </Typography>
         </Toolbar>

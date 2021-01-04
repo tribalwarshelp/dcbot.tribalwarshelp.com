@@ -82,12 +82,11 @@ const IndexPage = ({ location, pageContext }) => {
             </Typography>
             <Typography gutterBottom>{t.header.description}</Typography>
             <Divider variant="fullWidth" className={classes.divider} />
-            <ButtonGroup variant="contained" color="secondary">
+            <ButtonGroup variant="contained" color="primary">
               <Button>
                 <Link
                   href={data.site.siteMetadata.botInviteUrl}
                   color="inherit"
-                  underline="none"
                   title={t.header.inviteBot}
                 >
                   {t.header.inviteBot}
@@ -97,7 +96,7 @@ const IndexPage = ({ location, pageContext }) => {
                 <Link
                   to={routes[pageContext.langKey].COMMANDS_PAGE}
                   color="inherit"
-                  underline="none"
+                  title={t.header.commands}
                 >
                   {t.header.commands}
                 </Link>

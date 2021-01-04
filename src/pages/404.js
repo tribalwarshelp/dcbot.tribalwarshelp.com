@@ -43,9 +43,7 @@ const NotFoundPage = ({ location, pageContext }) => {
           exist on this site.
         </Typography>
         <Typography variant="h4">
-          <Link color="secondary" to="/">
-            Back to our site
-          </Link>
+          <Link to="/">Back to our site</Link>
         </Typography>
       </Container>
     </Layout>
