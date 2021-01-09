@@ -8,42 +8,42 @@ const commandsForEveryone = [
   {
     command: 'tw!tribe topoda',
     commandSyntax:
-      'tw!tribe topoda [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]',
+      'tw!tribe topoda [server] [page] [tribe id/tag, you can enter more than one]',
     description:
       'This command generates a player list from selected tribes ordered by ODA.',
-    example: 'tw!tribe topoda pl143 1 975 170',
+    example: 'tw!tribe topoda en113 1 KEKW',
   },
   {
     command: 'tw!tribe topodd',
     commandSyntax:
-      'tw!tribe topodd [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]',
+      'tw!tribe topodd [server] [page] [tribe id/tag, you can enter more than one]',
     description:
       'This command generates a player list from selected tribes ordered by ODD.',
-    example: 'tw!tribe topodd pl143 1 975 170',
+    example: 'tw!tribe topodd en113 1 KEKW',
   },
   {
     command: 'tw!tribe topods',
     commandSyntax:
-      'tw!tribe topods [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]',
+      'tw!tribe topods [server] [page] [tribe id/tag, you can enter more than one]',
     description:
       'This command generates a player list from selected tribes ordered by ODS.',
-    example: 'tw!tribe topods pl143 1 975 170',
+    example: 'tw!tribe topods en113 1 KEKW',
   },
   {
     command: 'tw!tribe topod',
     commandSyntax:
-      'tw!tribe topod [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]',
+      'tw!tribe topod [server] [page] [tribe id/tag, you can enter more than one]',
     description:
       'This command generates a player list from selected tribes ordered by OD.',
-    example: 'tw!tribe topod pl143 1 975 170',
+    example: 'tw!tribe topod en113 1 KEKW',
   },
   {
     command: 'tw!tribe toppoints',
     commandSyntax:
-      'tw!tribe toppoints [server] [page] [tribe_id1] [tribe_id2] ... [tribe_idn]',
+      'tw!tribe toppoints [server] [page] [tribe id/tag, you can enter more than one]',
     description:
       'This command generates a player list from selected tribes ordered by points.',
-    example: 'tw!tribe toppoints pl143 1 975 170',
+    example: 'tw!tribe toppoints en113 1 KEKW',
   },
 ];
 
@@ -69,9 +69,10 @@ const adminCommands = [
   },
   {
     command: 'tw!observe',
-    commandSyntax: 'tw!observe [group ID from tw!groups] [server] [tribe id]',
+    commandSyntax:
+      'tw!observe [group ID from tw!groups] [server] [tribe id/tribe tag]',
     description: 'This command adds a tribe to the observation group.',
-    example: 'tw!observe 1 pl143 975 170',
+    example: 'tw!observe 1 en113 KEKW',
   },
   {
     command: 'tw!observations',
@@ -85,7 +86,7 @@ const adminCommands = [
     commandSyntax:
       'tw!deleteobservation [group ID from tw!groups] [id from tw!observations]',
     description: 'This command removes a tribe from the observation group.',
-    example: 'tw!deleteobservation 1 pl143 975 170',
+    example: 'tw!deleteobservation 1 1',
   },
   {
     command: 'tw!conqueredvillages',

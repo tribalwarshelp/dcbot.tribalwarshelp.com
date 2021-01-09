@@ -6,44 +6,44 @@ const commandsForEveryone = [
     example: 'tw!help',
   },
   {
-    command: 'tw!tribe topatt',
+    command: 'tw!tribe topod',
     commandSyntax:
-      'tw!tribe topatt [serwer] [strona] [id_plemienia1] [id_plemienia2] ... [id_plemienia n]',
+      'tw!tribe topod [serwer] [strona] [id/skrót plemienia, można podać więcej niż 1]',
     description:
       'Generuje listę graczy z wybranych plemion i sortuje po pokonanych w ataku.',
-    example: 'tw!tribe topatt pl143 1 975 170',
+    example: 'tw!tribe topod pl148 1 AWW! AWW!!',
   },
   {
-    command: 'tw!tribe topdef',
+    command: 'tw!tribe topodd',
     commandSyntax:
-      'tw!tribe topdef [serwer] [strona] [id_plemienia1] [id_plemienia2] ... [id_plemienia n]',
+      'tw!tribe topodd [serwer] [strona] [id/skrót plemienia, można podać więcej niż 1]',
     description:
       'Generuje listę graczy z wybranych plemion i sortuje po pokonanych w obronie.',
-    example: 'tw!tribe topdef pl143 1 975 170',
+    example: 'tw!tribe topodd pl148 1 AWW! AWW!!',
   },
   {
-    command: 'tw!tribe topsupp',
+    command: 'tw!tribe topods',
     commandSyntax:
-      'tw!tribe topsupp [serwer] [strona] [id_plemienia1] [id_plemienia2] ... [id_plemienia n]',
+      'tw!tribe topods [serwer] [strona] [id/skrót plemienia, można podać więcej niż 1]',
     description:
       'Generuje listę graczy z wybranych plemion i sortuje po pokonanych jako wspierający.',
-    example: 'tw!tribe topsupp pl143 1 975 170',
+    example: 'tw!tribe topods pl148 1 AWW! AWW!!',
   },
   {
-    command: 'tw!tribe toptotal',
+    command: 'tw!tribe topod',
     commandSyntax:
-      'tw!tribe toptotal [serwer] [strona] [id_plemienia1] [id_plemienia2] ... [id_plemienia n]',
+      'tw!tribe topod [serwer] [strona] [id/skrót plemienia, można podać więcej niż 1]',
     description:
       'Generuje listę graczy z wybranych plemion i sortuje po pokonanych ogólnie.',
-    example: 'tw!tribe toptotal pl143 1 975 170',
+    example: 'tw!tribe topod pl148 1 AWW! AWW!!',
   },
   {
     command: 'tw!tribe toppoints',
     commandSyntax:
-      'tw!tribe toppoints [serwer] [strona] [id_plemienia1] [id_plemienia2] ... [id_plemienia n]',
+      'tw!tribe toppoints [serwer] [strona] [id/skrót plemienia, można podać więcej niż 1]',
     description:
       'Generuje listę graczy z wybranych plemion i sortuje po punktach.',
-    example: 'tw!tribe toppoints pl143 1 975 170',
+    example: 'tw!tribe toppoints pl148 1 AWW! AWW!!',
   },
 ];
 
@@ -69,9 +69,10 @@ const adminCommands = [
   },
   {
     command: 'tw!observe',
-    commandSyntax: 'tw!observe [ID grupy z tw!groups] [serwer] [id plemienia]',
+    commandSyntax:
+      'tw!observe [ID grupy z tw!groups] [serwer] [id plemienia/skrót plemienia]',
     description: 'Dodaje plemię do grupy.',
-    example: 'tw!observe 1 pl143 975 170',
+    example: 'tw!observe 1 pl148 AWW!',
   },
   {
     command: 'tw!observations',
@@ -84,7 +85,7 @@ const adminCommands = [
     commandSyntax:
       'tw!deleteobservation [ID grupy z tw!groups] [id z tw!observations]',
     description: 'Usuwa plemię z grupy.',
-    example: 'tw!deleteobservation 1 pl143 975 170',
+    example: 'tw!deleteobservation 1 1',
   },
   {
     command: 'tw!conqueredvillages',

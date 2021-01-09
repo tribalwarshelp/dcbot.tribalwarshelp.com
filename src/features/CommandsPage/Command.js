@@ -3,17 +3,23 @@ import PropTypes from 'prop-types';
 
 import { Card, CardHeader, CardContent, Typography } from '@material-ui/core';
 
-function Command({ command, commandSyntax, description, example }) {
+function Command({
+  command,
+  commandSyntax,
+  description,
+  example,
+  exampleText = '',
+}) {
   return (
-    <Card>
+    <Card style={{ height: '100%' }}>
       <CardHeader title={command} subheader={commandSyntax} />
-      <CardContent>
+      <CardContent style={{ height: '100%' }}>
         <Typography>
           {description}
           {example && (
             <>
               <br />
-              <strong>Example</strong>: {example}
+              <strong>{exampleText}</strong>: {example}
             </>
           )}
         </Typography>

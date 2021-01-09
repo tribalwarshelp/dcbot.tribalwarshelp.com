@@ -27,7 +27,7 @@ const CommandsPage = ({ location, pageContext }) => {
           <Grid container spacing={2}>
             {c.commandsForEveryone.map(cmd => (
               <Grid key={cmd.command} item xs={12} sm={6}>
-                <Command {...cmd} />
+                <Command {...cmd} exampleText={t.example} />
               </Grid>
             ))}
           </Grid>
@@ -39,7 +39,7 @@ const CommandsPage = ({ location, pageContext }) => {
           <Grid container spacing={2}>
             {c.adminCommands.map(cmd => (
               <Grid key={cmd.command} item xs={12} sm={6}>
-                <Command {...cmd} />
+                <Command {...cmd} exampleText={t.example} />
               </Grid>
             ))}
           </Grid>
