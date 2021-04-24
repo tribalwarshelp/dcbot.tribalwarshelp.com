@@ -1,4 +1,4 @@
-export default {
+const translations = {
   title: 'Komendy',
   description:
     'Lista komend oferowanych przez TWHelp Discord Bot z przykładami',
@@ -10,3 +10,5 @@ export default {
     title: 'Dla adminów',
   },
 };
+
+export default translations

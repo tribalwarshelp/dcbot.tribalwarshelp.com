@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 import { Link } from 'gatsby-theme-material-ui';
 import Layout from '@components/Layout/Layout';
-import SEO from '@components/SEO';
+import Seo from '@components/Seo';
 
 const useStyles = makeStyles(theme => ({
   divider: {
@@ -68,7 +68,7 @@ const IndexPage = ({ location, pageContext }) => {
 
   return (
     <Layout lang={pageContext.langKey} pathname={location.pathname}>
-      <SEO
+      <Seo
         title={t.title}
         description={t.description}
         location={location.pathname}

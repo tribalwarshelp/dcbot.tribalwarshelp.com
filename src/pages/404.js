@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Container, Typography } from '@material-ui/core';
 import { Link } from 'gatsby-theme-material-ui';
 import Layout from '@components/Layout/Layout';
-import SEO from '@components/SEO';
+import Seo from '@components/Seo';
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -29,7 +29,7 @@ const NotFoundPage = ({ location, pageContext }) => {
       lang={pageContext.langKey}
       pathname={location.pathname}
     >
-      <SEO
+      <Seo
         title="Page Not found"
         description="Page not found"
         location={location.pathname}

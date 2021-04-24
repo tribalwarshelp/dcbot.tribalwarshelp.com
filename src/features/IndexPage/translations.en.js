@@ -1,4 +1,4 @@
-export default {
+const translations = {
   title: 'Home',
   description:
     'Discord bot for the online game Tribalwars. | Real-time notifications about lost/conquered village.',
@@ -10,3 +10,5 @@ export default {
     commands: 'Commands',
   },
 };
+
+export default translations;

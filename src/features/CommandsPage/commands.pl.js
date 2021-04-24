@@ -147,7 +147,9 @@ const adminCommands = [
   },
 ];
 
-export default {
+const commands = {
   commandsForEveryone,
   adminCommands,
 };
+
+export default commands;

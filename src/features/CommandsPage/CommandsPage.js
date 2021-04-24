@@ -4,7 +4,7 @@ import commands from './commands';
 
 import { Container, Typography, Grid, Box } from '@material-ui/core';
 import Layout from '@components/Layout/Layout';
-import SEO from '@components/SEO';
+import Seo from '@components/Seo';
 import Command from './Command';
 
 const CommandsPage = ({ location, pageContext }) => {
@@ -13,7 +13,7 @@ const CommandsPage = ({ location, pageContext }) => {
 
   return (
     <Layout lang={pageContext.langKey} pathname={location.pathname}>
-      <SEO
+      <Seo
         title={t.title}
         location={location.pathname}
         description={t.description}

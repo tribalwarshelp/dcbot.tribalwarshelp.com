@@ -7,7 +7,9 @@ const en = {
   COMMANDS_PAGE: '/commands/',
 };
 
-export default {
+const routes = {
   pl,
   en,
 };
+
+export default routes

@@ -1,7 +1,9 @@
 import en from './commands.en';
 import pl from './commands.pl';
 
-export default {
+const translations = {
   en,
   pl,
 };
+
+export default translations;

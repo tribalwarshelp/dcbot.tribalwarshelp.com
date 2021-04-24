@@ -3,7 +3,7 @@ const siteUrl = 'https://dcbot.tribalwarshelp.com';
 module.exports = {
   siteMetadata: {
     title: `TWHelp Discord Bot`,
-    description: `Discord bot for online game Tribalwars. | Real-time notifications about lost/conquered village.`,
+    description: `Discord bot for online game Tribalwars. | Real-time notifications about conquered/lost villages.`,
     siteUrl,
     twhelpUrl: 'https://tribalwarshelp.com',
     botInviteUrl:
@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Tribal Wars Bot`,
+        name: `TWHelp Discord Bot`,
         short_name: `twdcbot`,
         start_url: `/`,
         background_color: `#303032`,
@@ -37,7 +37,16 @@ module.exports = {
     {
       resolve: `gatsby-theme-material-ui`,
       options: {
-        webFontsConfig: null,
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Montserrat`,
+                variants: [`300`],
+              },
+            ],
+          },
+        },
       },
     },
     `gatsby-plugin-sitemap`,
