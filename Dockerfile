@@ -27,6 +27,6 @@ RUN yarn build
 #Stage 2
 FROM nginx:1.20-alpine
 COPY --from=build-deps /usr/src/app/public /var/www
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY default.conf /etc/nginx/templates/default.conf.template
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
