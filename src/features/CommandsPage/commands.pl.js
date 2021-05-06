@@ -91,14 +91,14 @@ const adminCommands = [
     command: 'tw!conqueredvillages',
     commandSyntax: 'tw!conqueredvillages [ID grupy z tw!groups]',
     description:
-      'Zmienia kanał na którym będą się pojawiać informację o podbitych wioskach w danej grupie. WAŻNE! Wywołaj tę komendę na kanale na którym chcesz dostawać te powiadomienia.',
+      'Ustawia kanał na którym będą się pojawiać informację o podbitych wioskach w danej grupie. WAŻNE! Wywołaj tę komendę na kanale na którym chcesz dostawać te powiadomienia.',
     example: 'tw!conqueredvillages 1',
   },
   {
     command: 'tw!lostvillages',
     commandSyntax: 'tw!lostvillages [ID grupy z tw!groups]',
     description:
-      'Zmienia kanał na którym będą się pojawiać informację o straconych wioskach w danej grupie. WAŻNE! Wywołaj tę komendę na kanale na którym chcesz dostawać te powiadomienia.',
+      'Ustawia kanał na którym będą się pojawiać informację o straconych wioskach w danej grupie. WAŻNE! Wywołaj tę komendę na kanale na którym chcesz dostawać te powiadomienia.',
     example: 'tw!lostvillages 2',
   },
   {

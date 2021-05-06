@@ -1,7 +1,7 @@
 const translations = {
   title: 'Komendy',
   description:
-    'Lista komend oferowanych przez TWHelp Discord Bot z przykładami',
+    'Lista komend oferowanych przez bota z przykładami',
   example: 'Przykład',
   commandsForEveryoneSection: {
     title: 'Dla wszystkich',

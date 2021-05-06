@@ -74,7 +74,7 @@ function Seo({ description, lang, meta, title, location }) {
         },
         {
           property: `og:locale`,
-          content: `pl`,
+          content: lang,
         },
         {
           name: `twitter:card`,
@@ -105,7 +105,7 @@ function Seo({ description, lang, meta, title, location }) {
       <link
         rel="canonical"
         content={`${site.siteMetadata.siteUrl}${location}`}
-      ></link>
+      />
     </Helmet>
   );
 }

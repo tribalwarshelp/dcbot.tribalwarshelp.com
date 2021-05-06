@@ -92,14 +92,14 @@ const adminCommands = [
     command: 'tw!conqueredvillages',
     commandSyntax: 'tw!conqueredvillages [group ID from tw!groups]',
     description:
-      'This command changes the channel on which notifications about conquered village will show. IMPORTANT! Run this command on the channel you want to display these notifications.',
+      'This command sets the channel on which notifications about conquered village will be displayed. IMPORTANT! Run this command on the channel you want to display these notifications.',
     example: 'tw!conqueredvillages 1',
   },
   {
     command: 'tw!lostvillages',
     commandSyntax: 'tw!lostvillages [group ID from tw!groups]',
     description:
-      'This command changes the channel on which notifications about lost village will show. IMPORTANT! Run this command on the channel you want to display these notifications.',
+      'This command sets the channel on which notifications about lost village will be displayed. IMPORTANT! Run this command on the channel you want to display these notifications.',
     example: 'tw!lostvillages 2',
   },
   {
