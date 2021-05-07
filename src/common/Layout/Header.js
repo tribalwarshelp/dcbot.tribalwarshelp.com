@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import routes from '@config/routes';
+import { Route } from '@config/routing';
 
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -56,7 +56,7 @@ function Header({ twhelpUrl, lang, languages, pathname }) {
           />
           <nav>
             <Hidden implementation="css" xsDown className={classes.hidden}>
-              <Link title="Home" color="inherit" to={routes[lang].HOME}>
+              <Link title="Home" color="inherit" to={Route[lang].IndexPage}>
                 Home
               </Link>
               <Link title={twhelpText} color="inherit" href={twhelpUrl}>
@@ -93,7 +93,7 @@ function Header({ twhelpUrl, lang, languages, pathname }) {
                     color="inherit"
                     underline="none"
                     className={classes.link}
-                    to={routes[lang].HOME}
+                    to={Route[lang].IndexPage}
                   >
                     Home
                   </Link>

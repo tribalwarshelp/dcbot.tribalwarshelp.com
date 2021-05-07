@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import routes from '@config/routes';
+import { Route } from '@config/routing';
 import translations from './translations';
 
 import { makeStyles } from '@material-ui/core/styles';
@@ -14,8 +14,8 @@ import {
   Grid,
 } from '@material-ui/core';
 import { Link } from 'gatsby-theme-material-ui';
-import Layout from '@components/Layout/Layout';
-import Seo from '@components/Seo';
+import Layout from '@common/Layout/Layout';
+import Seo from '@common/Seo';
 
 const useStyles = makeStyles(theme => ({
   divider: {
@@ -94,7 +94,7 @@ const IndexPage = ({ location, pageContext }) => {
               </Button>
               <Button>
                 <Link
-                  to={routes[pageContext.langKey].COMMANDS_PAGE}
+                  to={Route[pageContext.langKey].CommandsPage}
                   color="inherit"
                   title={t.header.commands}
                 >

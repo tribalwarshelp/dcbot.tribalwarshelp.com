@@ -3,8 +3,8 @@ import translations from './translations';
 import commands from './commands';
 
 import { Container, Typography, Grid, Box } from '@material-ui/core';
-import Layout from '@components/Layout/Layout';
-import Seo from '@components/Seo';
+import Layout from '@common/Layout/Layout';
+import Seo from '@common/Seo';
 import Command from './Command';
 
 const CommandsPage = ({ location, pageContext }) => {

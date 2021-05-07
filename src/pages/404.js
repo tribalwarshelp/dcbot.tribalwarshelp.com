@@ -3,8 +3,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Typography } from '@material-ui/core';
 import { Link } from 'gatsby-theme-material-ui';
-import Layout from '@components/Layout/Layout';
-import Seo from '@components/Seo';
+import Layout from '@common/Layout/Layout';
+import Seo from '@common/Seo';
 
 const useStyles = makeStyles(() => ({
   container: {

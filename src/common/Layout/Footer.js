@@ -5,11 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography, Container } from '@material-ui/core';
 import { Link } from 'gatsby-theme-material-ui';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   appBar: {
     backgroundColor: 'transparent',
     color: '#fff',
     boxShadow: 'none',
+    padding: theme.spacing(1, 0)
   },
   copyright: {
     width: '100%',
