@@ -1,8 +1,10 @@
-FROM node:14.18.0-alpine as build-deps
+FROM node:14.18.1-alpine as build-deps
 
-ENV NODE_ENV=production
+ARG PLAUSIBLE_CUSTOM_DOMAIN=""
 
-#Stage 1
+ENV PLAUSIBLE_CUSTOM_DOMAIN=$PLAUSIBLE_CUSTOM_DOMAIN \
+    NODE_ENV=production
+
 RUN apk --no-cache add shadow \
     gcc \
     musl-dev \
@@ -17,14 +19,15 @@ RUN apk --no-cache add shadow \
     zlib-dev \
     file \
     pkgconf
-RUN npm install --global gatsby-cli@3.3.0
 WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
+RUN yarn global add gatsby-cli@3.3.0
 RUN yarn
 COPY . ./
 RUN yarn build
 
 #Stage 2
+
 FROM nginx:1.21-alpine
 COPY --from=build-deps /usr/src/app/public /var/www
 COPY default.conf /etc/nginx/templates/default.conf.template

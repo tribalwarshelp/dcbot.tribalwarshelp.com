@@ -1,10 +1,11 @@
-const siteUrl = 'https://dcbot.tribalwarshelp.com';
+const DOMAIN = 'dcbot.tribalwarshelp.com';
+const SITE_URL = 'https://' + DOMAIN;
 
 module.exports = {
   siteMetadata: {
     title: `TWHelp Discord Bot`,
     description: `Discord bot for online game Tribalwars. | Real-time notifications about conquered/lost villages.`,
-    siteUrl,
+    siteUrl: SITE_URL,
     twhelpUrl: 'https://tribalwarshelp.com',
     botInviteUrl:
       'https://discord.com/oauth2/authorize?client_id=707859810900508703&scope=bot&permissions=8',
@@ -53,8 +54,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: siteUrl,
-        sitemap: siteUrl + '/sitemap.xml',
+        host: SITE_URL,
+        sitemap: SITE_URL + '/sitemap.xml',
         env: {
           development: {
             policy: [{ userAgent: '*', disallow: ['/'] }],
@@ -72,6 +73,13 @@ module.exports = {
         langKeyForNull: 'en',
         useLangKeyLayout: false,
         prefixDefault: false,
+      },
+    },
+    {
+      resolve: `@kichiyaki/gatsby-plugin-plausible`,
+      options: {
+        domain: DOMAIN,
+        customDomain: process.env.PLAUSIBLE_CUSTOM_DOMAIN,
       },
     },
   ],
