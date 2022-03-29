@@ -26,8 +26,8 @@
     "gatsby-transformer-sharp": "^3.3.0",
     "prop-types": "^15.7.2",
     "ptz-i18n": "^1.0.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
